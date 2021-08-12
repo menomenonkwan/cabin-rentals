@@ -4,18 +4,13 @@
   --light: #;
   --dark: #72a84a;
   --white: #eee;
+  --black: #1a1a1a;
 }
 
 * {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -65,11 +60,14 @@ nav ul {
   height: 100vh;
   padding-top: 5em;
   z-index: 100;
+  transform: translateX(100vw);
+  transition: all 0.3s ease;
 }
 
 nav ul li a {
+  text-align: left;
   font-size: 2rem;
-  padding: 1.5rem;
+  padding: 0.5rem 1.5rem 2rem;
   width: 100%;
   font-weight: bold;
   display: block;
@@ -79,6 +77,170 @@ nav ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.open-nav {
+  visibility: unset;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* MAIN */
+.forest-hero {
+  background: url("../images/forest.jpg");
+  background-size: cover;
+  color: var(--white, white);
+}
+
+.wrapper {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.subtitle {
+  padding: 3em 0 0.75em;
+}
+
+h1 span {
+  display: block;
+  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+}
+
+.cta {
+  background: var(--dark, green);
+  color: var(--black, black);
+  padding: 0.7em 2em;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 3em;
+  cursor: pointer;
+}
+
+ul.featured-cabins {
+  width: 60%;
+  margin: 3rem auto;
+}
+
+ul.featured-cabins li {
+  margin-bottom: 3em;
+}
+
+.cabin-img {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cabin-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.cabin-desc,
+.left p {
+  line-height: 1.75;
+  margin: 2rem 0;
+}
+
+.cabin-cta {
+  border-bottom: 3px solid var(--white, white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding: 0.75rem;
+}
+
+.cabin-cta img {
+  width: 15px;
+}
+
+/* FEATURES SSECTION */
+.feature-container {
+  background: var(--black, black);
+}
+
+ul.features {
+  width: 75%;
+  margin: 2rem auto;
+  color: var(--white, white);
+}
+
+ul.features li {
+  margin: 2rem 0;
+}
+
+ul.features li img {
+  width: 65px;
+}
+
+ul.features li h2 {
+  margin: 1rem 0;
+}
+
+.features li p {
+  line-height: 1.75;
+  color: var(--grey, lightgrey);
+}
+
+/* TESTIMONIALS */
+.main-quote {
+  font-family: "Playfair Display", serif;
+  font-size: 2.25rem;
+  font-style: italic;
+  margin: 2rem 0 1rem;
+}
+.main-cite {
+  color: var(--dark, green);
+  margin-bottom: 3rem;
+  display: block;
+}
+
+ul.testimonials {
+  width: 75%;
+  margin: 3rem auto;
+}
+
+ul.testimonials li {
+  margin-bottom: 3rem;
+}
+
+.test-img {
+  border-radius: 50%;
+  width: 100px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.test-desc {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+.test-auth {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.last-container {
+  position: relative;
+}
+
+.fern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  z-index: 1;
+  opacity: 0.08;
 }
