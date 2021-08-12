@@ -1,3 +1,3 @@
 # cabin-rentals
 
-ui design animated using gsap library following gary simon ui course
+ui design animated using GSAP library following gary simon ui course
