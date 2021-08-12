@@ -1,0 +1,54 @@
+body {
+  background: var(--white, white);
+}
+
+.sub-hero {
+  background: url("../images/forest-bg-2.jpg");
+  background-size: cover;
+  height: 70vh;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0.5rem;
+}
+
+.breadcrumbs li a {
+  margin-right: 0.4rem;
+}
+
+.main-copy h1 {
+  margin-bottom: 2rem;
+}
+
+p.sub-desc {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul.featured-cabins {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(200px, 300px));
+  margin-top: 5rem;
+  width: 85%;
+}
+
+.cabin-cta {
+  color: var(--black, black);
+  border-color: var(--black, black);
+}
+
+@media (min-width: 950px) {
+  .hero {
+    padding: 4rem;
+  }
+
+  .breadcrumbs {
+    justify-content: flex-start;
+  }
+
+  p.sub-desc {
+    width: 100%;
+  }
+}

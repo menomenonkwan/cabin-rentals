@@ -5,6 +5,7 @@
   --dark: #72a84a;
   --white: #eee;
   --black: #1a1a1a;
+  --grey: #6d6d6d;
 }
 
 * {
@@ -34,7 +35,7 @@ header {
   display: flex;
   justify-content: space-between;
   background: var(--white, white);
-  padding: 0.5em;
+  padding: 1em 1.25em;
 }
 
 .logo {
@@ -120,7 +121,7 @@ h1 span {
   border-radius: 3px;
   font-weight: bold;
   font-size: 1.25rem;
-  margin: 3em;
+  margin: 3em 0;
   cursor: pointer;
 }
 
@@ -134,7 +135,7 @@ ul.featured-cabins li {
 }
 
 .cabin-img {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cabin-title {
@@ -200,7 +201,7 @@ ul.features li h2 {
   margin: 2rem 0 1rem;
 }
 .main-cite {
-  color: var(--dark, green);
+  color: var(--grey, lightgrey);
   margin-bottom: 3rem;
   display: block;
 }
@@ -243,4 +244,140 @@ ul.testimonials li {
   width: 90%;
   z-index: 1;
   opacity: 0.08;
+}
+
+/* MEDIA */
+@media (min-width: 550px) {
+  .menu,
+  .exit {
+    display: none;
+  }
+
+  nav ul {
+    visibility: unset;
+    transform: translateX(0);
+    opacity: 1;
+    background: none;
+    position: unset;
+    height: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    color: var(--black, black);
+    font-size: 1rem;
+    font-weight: unset;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  ul.nav li:last-child a {
+    padding-right: 0;
+  }
+
+  ul.nav .active a {
+    font-weight: bold;
+  }
+
+  ul.nav .res a {
+    color: var(--dark, green);
+    font-weight: bold;
+  }
+
+  ul.featured-cabins {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 650px) {
+  ul.features {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  h1 span {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .wrapper {
+    text-align: left;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .hero {
+    padding: 5rem;
+  }
+
+  .main-copy {
+    width: 40%;
+  }
+
+  p.subtitle {
+    margin: 3rem 0 1rem;
+    padding: 0;
+  }
+
+  ul.featured-cabins {
+    width: 70%;
+  }
+
+  .last-container {
+    padding: 0 4em;
+  }
+
+  .main-quote {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+
+  .main-cite {
+    font-size: 1.5rem;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  .bio {
+    width: 90%;
+  }
+
+  ul.testimonials {
+    width: 100%;
+    margin-left: 3rem;
+  }
+
+  ul.testimonials li {
+    display: flex;
+    background: var(--white);
+    border-radius: 3px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+  }
+
+  .test-left {
+    margin-left: 1.5rem;
+  }
+
+  .fern {
+    width: 40%;
+    opacity: 0.05;
+  }
+
+  .cabin-desc,
+  ul.features li p,
+  .left p {
+    font-size: 1.15rem;
+  }
 }
